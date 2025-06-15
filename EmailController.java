@@ -69,7 +69,7 @@ public class EmailController {
                 }
             }
         } catch (IOException e) {
-            // File might not exist yet
+            
         }
 
         if (search != null && !search.isEmpty()) {
@@ -118,7 +118,7 @@ public class EmailController {
 
                 redirectAttributes.addFlashAttribute("message", "Email sent successfully from " + account.get("MAIL_USERNAME") + "!");
                 redirectAttributes.addFlashAttribute("alertClass", "success");
-                break; // Stop after successful send
+                break; 
 
             } catch (Exception e) {
                 redirectAttributes.addFlashAttribute("message", "Error sending email from " + account.get("MAIL_USERNAME") + ": " + e.getMessage());
